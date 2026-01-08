@@ -28,9 +28,12 @@ export function createAudioEngine() {
     oscillator.stop(now + attack + decay + release + 0.05);
   }
 
-  function start(pattern, instrument, tempo, onStep) {
+  async function start(pattern, instrument, tempo, onStep) {
     if (timer) {
       return;
+    }
+    if (context.state !== "running") {
+      await context.resume();
     }
     stepIndex = 0;
     const interval = (60 / tempo) / 4 * 1000;

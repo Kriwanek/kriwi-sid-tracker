@@ -72,13 +72,13 @@ function setPlaying(isPlaying) {
   elements.stop.disabled = !isPlaying;
 }
 
-function startPlayback() {
+async function startPlayback() {
   updateInstrument();
   const pattern = state.song.patterns[0];
   const instrument = state.song.instruments[0];
   const tempo = Number(elements.tempo.value);
 
-  audioEngine.start(pattern, instrument, tempo, (stepIndex) => {
+  await audioEngine.start(pattern, instrument, tempo, (stepIndex) => {
     state.currentStep = stepIndex;
   });
   setPlaying(true);
