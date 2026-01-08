@@ -1,0 +1,140 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0e1116;
+  color: #e7ecf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid #1c2230;
+  background: #11151c;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: #a9b2c3;
+}
+
+.transport {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.transport input {
+  width: 72px;
+}
+
+.workspace {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 24px 32px 48px;
+}
+
+.panel {
+  background: #141923;
+  border: 1px solid #1d2533;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.step {
+  background: #10151e;
+  border: 1px solid #242e3f;
+  border-radius: 8px;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+  align-items: center;
+}
+
+.step.active {
+  border-color: #5b8cff;
+  box-shadow: 0 0 0 2px rgba(91, 140, 255, 0.3);
+}
+
+.step-number {
+  font-size: 12px;
+  color: #90a2bf;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #7cd4ff;
+}
+
+.file-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instrument-form {
+  display: grid;
+  gap: 12px;
+}
+
+.instrument-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.adsr {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+button {
+  background: #2749ff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #3a3f4b;
+  cursor: not-allowed;
+}
+
+input,
+select {
+  background: #0e1116;
+  border: 1px solid #2a3345;
+  color: #e7ecf2;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.footer {
+  padding: 16px 32px;
+  border-top: 1px solid #1c2230;
+  color: #8c97ab;
+}

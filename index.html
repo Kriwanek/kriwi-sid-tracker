@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kriwi SID Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>Kriwi SID Tracker</h1>
+        <p class="subtitle">MVP: Pattern-Editor, SID-Instrumente, MIDI-Import</p>
+      </div>
+      <div class="transport">
+        <label>
+          Tempo
+          <input id="tempo" type="number" min="40" max="240" value="120" />
+        </label>
+        <button id="play">Play</button>
+        <button id="stop" disabled>Stop</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel">
+        <h2>Projekt</h2>
+        <label class="file-input">
+          MIDI importieren
+          <input id="midi-file" type="file" accept=".mid,.midi" />
+        </label>
+        <div id="import-status" class="status"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Pattern-Editor</h2>
+        <div id="pattern-grid" class="pattern-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>SID-Instrument</h2>
+        <form id="instrument-form" class="instrument-form">
+          <label>
+            Name
+            <input id="instrument-name" type="text" value="Pulse Lead" />
+          </label>
+          <label>
+            Wellenform
+            <select id="instrument-wave">
+              <option value="pulse">Pulse</option>
+              <option value="sawtooth">Saw</option>
+              <option value="triangle">Triangle</option>
+              <option value="square">Square</option>
+              <option value="noise">Noise</option>
+            </select>
+          </label>
+          <div class="adsr">
+            <label>
+              Attack
+              <input id="attack" type="number" min="0" max="1" step="0.01" value="0.02" />
+            </label>
+            <label>
+              Decay
+              <input id="decay" type="number" min="0" max="1" step="0.01" value="0.2" />
+            </label>
+            <label>
+              Sustain
+              <input id="sustain" type="number" min="0" max="1" step="0.01" value="0.7" />
+            </label>
+            <label>
+              Release
+              <input id="release" type="number" min="0" max="1" step="0.01" value="0.2" />
+            </label>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">MVP-Prototyp für den SID-Tracker</footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
