@@ -1,0 +1,26 @@
+KICKERBAY DASHBOARD FIX R14
+===========================
+
+BEHEBT
+- Anwesenheitsbuttons im Dashboard reagieren wieder.
+- Alle aktiven Teammitglieder können ihren eigenen Status ändern.
+- Der Slider zeigt automatisch Termin 1, 2 und 3 an.
+- Wischen, Punkte-Navigation und automatischer Wechsel funktionieren.
+- Deutsche Wochentage werden direkt in PHP ausgegeben.
+- Eine gespeicherte Endzeit wird als z. B. 17:30–19:00 Uhr angezeigt.
+- Anwesenheitsstände werden für alle drei Termine geladen.
+- Trainer, Teamleitung und Administratoren dürfen weiterhin „Reset (alle)“ benutzen.
+
+INSTALLATION
+1. Den Inhalt dieser ZIP direkt in public_html hochladen.
+2. Im Browser öffnen:
+   https://kickerbay.de/install_kickerbay_dashboard_r14.php
+3. Nach der Erfolgsmeldung auf „Dashboard mit frischem Cache öffnen“ klicken.
+4. Anschließend install_kickerbay_dashboard_r14.php vom Server löschen.
+5. Bei Bedarf zusätzlich Strg + F5 drücken.
+
+SICHERHEIT
+Vor jeder Änderung erzeugt der Installer automatisch Sicherungskopien von dashboard.php und api/term_poll.php.
+
+DATENBANK
+Keine manuelle Datenbankänderung erforderlich.
