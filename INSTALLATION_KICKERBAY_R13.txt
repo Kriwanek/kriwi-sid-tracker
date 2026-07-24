@@ -1,0 +1,23 @@
+Kickerbay Dashboard-Fix R13 — 25.07.2026
+
+Enthalten:
+- Deutsche Wochentage im Bereich „Nächster Termin“
+- Anzeige der Endzeit, sofern in der Datenbank gespeichert
+- Ergänzung „Uhr“ bei Beginn, Endzeit und Treffen
+- Anwesenheitsänderung für alle aktiven Mannschaftsmitglieder
+- Berücksichtigung der Membership-Status „approved“ und „active“
+- Sperre erst nach Zusageschluss; ohne Zusageschluss ab Terminbeginn
+- „Reset (alle)“ bleibt Trainer/Teamleitung/Administratoren vorbehalten
+
+Installation:
+1. ZIP direkt in public_html hochladen.
+2. In public_html entpacken.
+3. Vorhandene Dateien überschreiben.
+4. Dashboard mit Strg+F5 neu laden.
+
+Ersetzte/ergänzte Dateien:
+- includes/kb_team_brand.php
+- api/term_poll.php
+- assets/js/kb_dashboard_term_r13.js
+
+Keine manuelle Datenbankänderung erforderlich.
