@@ -1,0 +1,28 @@
+name: Build Kickerbay Dashboard Patch
+
+on:
+  push:
+    branches:
+      - kickerbay-dashboard-r13-build
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare upload package
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifact
+          cp -a public_html/. artifact/
+      - name: Upload installation ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kickerbay_Dashboard_Wochentage_Endzeit_Anwesenheit_FIX_R13_2026-07-25
+          path: artifact/
+          if-no-files-found: error
+          retention-days: 7
